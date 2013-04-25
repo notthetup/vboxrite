@@ -9,6 +9,8 @@ if [[ "$existingVMs" == *\"$VMNAME\"* ]]; then
     VBoxManage unregistervm $VMNAME --delete
 fi
 
+rm -rf $HOME/VirtualBox\ VMs/$VMNAME
+
 if [[ -f $PATH_TO_VMDK ]]; then
     rm $PATH_TO_VMDK
 fi
